@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adereti Taiwo Professional software developer | Prompt engineer| ML engineer in progress.</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-purple: #7843e9;
+            --text-main: #333;
+            --text-light: #666;
+            --bg-light: #fafafa;
+            --white: #ffffff;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Dark Mode Variables --- */
+body.dark-mode {
+    --text-main: #eeeeee;
+    --text-light: #bbbbbb;
+    --bg-light: #121212;
+    --white: #1e1e1e;
+    --primary-purple: #a37df5; /* Slightly lighter purple for better contrast */
+}
+
+/* Adjusting sections with background patterns for Dark Mode */
+body.dark-mode .hero, 
+body.dark-mode #contact {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+                url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+/* Adjusting elements that need specific dark-mode tweaks */
+body.dark-mode .skill-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: #bbb;
+}
+
+body.dark-mode .form-control {
+    background: #2d2d2d;
+    color: white;
+}
+
+body.dark-mode .navbar {
+    border-bottom: 1px solid #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* --- Header & Nav --- */
+        .navbar {
+            padding: 1.5rem 0;
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .navbar-brand span {
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-weight: 700;
+            color: var(--text-main) !important;
+            letter-spacing: 1px;
+            margin-left: 2rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .nav-link:hover { color: var(--primary-purple) !important; }
+
+        .btn-contact-nav {
+            background: var(--primary-purple);
+            color: white !important;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(120, 67, 233, 0.3);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 90vh;
+            min-height: 600px;
+            background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url('https://www.transparenttextures.com/patterns/cubes.png');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary-purple);
+            border: none;
+            padding: 1rem 4rem;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: #6635d0;
+            transform: translateY(-3px);
+        }
+
+        /* --- About Section --- */
+        .section-padding { padding: 100px 0; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 5px;
+            background: var(--primary-purple);
+            border-radius: 5px;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            margin: 0 1rem 1rem 0;
+            background: rgba(153, 153, 153, 0.2);
+            border-radius: 5px;
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* --- Projects --- */
+        .project-row { margin-bottom: 8rem; align-items: center; }
+        .project-img-container {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .project-content h3 { font-weight: 700; margin-bottom: 1.5rem; }
+        .project-content p { color: var(--text-light); line-height: 1.7; margin-bottom: 2rem; }
+
+        /* --- Floating Sidebar --- */
+        .social-sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 0.5rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social-sidebar a {
+            padding: 1rem;
+            color: var(--text-main);
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .social-sidebar a:hover {
+            background: rgba(120, 67, 233, 0.1);
+            color: var(--primary-purple);
+        }
+
+        /* --- Contact Form --- */
+        #contact { background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url('https://www.transparenttextures.com/patterns/cubes.png'); }
+        .contact-card {
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-control {
+            background: #f0f0f0;
+            border: none;
+            padding: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        /* --- Mobile Optimization --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .social-sidebar { display: none; }
+            .contact-card { padding: 2rem; }
+            .nav-link { margin-left: 0; margin-bottom: 10px; }
+        }
+     
+        
+    </style>
+ 
+</head>
+<body>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar shadow-sm rounded-end">
+        <a href="https://www.linkedin.com/in/adereti-taiwo-5a7b93398?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+     <!-- <a href="#"><i class="fab fa-github"></i></a>  -->
+        <a href="https://x.com/elusivedev08?t=LMRpzK8voqV6csbQuqav7w&s=09"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="">
+                <img src="https://i.postimg.cc/15pm6CGy/mypics.jpg" alt="Profile">
+                <span>Adereti Taiwo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link btn-contact-nav" href="#contact">Contact</a></li>
+           
+           
+      
+    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero"
+    style="background-image: url('https://i.postimg.cc/zXMVmMw1/IMG_20251221_141208.jpg'); background-size: cover; background-position: center;"
+    
+    
+    >
+        <div class="container" id="background-container"  style="color: white;">
+              
+            <h1 class="animate__animated animate__fadeInDown">Hey, I'm Adereti Taiwo</h1>
+            <p class="animate__animated animate__fadeInUp " style="color: white;">
+                A MERN Stack Specialist, Prompt Engineer and Future Solution Architect building scalable web applications 
+                that drive success for businesses within the African Tech Ecosystem and Beyond.
+            </p>
+            <a href="#projects" class="btn btn-primary btn-primary-custom">Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p class="text-muted">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Get to know me!</h3>
+                    <p class="text-muted mb-4">
+                        I am a <strong>Full Stack Web Developer</strong> with over 3 years of experience building and managing the Front-end and Back-end of websites and Web Applications. Check out some of my work in the <strong>Projects</strong> section.
+                    </p>
+                    <p class="text-muted mb-4">
+                        My goal is to evolve into a <strong>Solution Architect</strong>, focusing on high-level system design, DevOps (Docker/AWS), and mentoring others in the African tech ecosystem.
+                    </p>
+                    <a href="#contact" class="btn btn-primary btn-primary-custom px-5">Contact</a>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">My Skills</h3>
+                    <div class="d-flex flex-wrap" id="skills-container">
+                        <!-- Dynamic Skill Badges -->
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Bootstrap 5</span>
+                        <span class="skill-badge">Git</span>
+                        
+                        <span class="skill-badge">Npm</span>
+                        
+                        <span class="skill-badge">Docker (Learning)</span>
+                        <span class="skill-badge">AWS (Roadmap)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <p class="text-muted">Each project is a unique piece of development that demonstrates my technical depth and architectural thinking.</p>
+            </div>
+
+            <!-- Project 1 -->
+            <div class="row project-row">
+                <div class="col-lg-7">
+                    <div class="project-img-container">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="img-fluid" alt="Project 1">
+                    </div>
+                </div>
+                <div class="col-lg-5 ps-lg-5 project-content">
+                      <br>
+                    <h3>Enterprise ERP System</h3>
+                   
+                    <p>A full-scale resource planning tool built with the MERN stack. Designed to handle inventory management, employee tracking, and financial reporting with high availability.</p>
+                   
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="row project-row flex-lg-row-reverse">
+                <div class="col-lg-7">
+                    <div class="project-img-container">
+                        <img src="https://i.postimg.cc/fW7g3nqD/IMG-20251221-145828.jpg" class="img-fluid" alt="Project 2">
+                    </div>
+                </div>
+                <div class="col-lg-5 pe-lg-5 project-content">
+                      <br>
+                    <h3>E-Commerce Architecture</h3>
+                    
+                    <p>High-performance marketplace optimized for mobile users. Implemented custom caching strategies and a scalable MongoDB schema to handle thousands of concurrent users.</p>
+                    
+                </div>
+            </div> 
+            
+            <!-- project 3-->
+               <div class="row project-row flex-lg-row-reverse">
+                <div class="col-lg-7">
+                    <div class="project-img-container">
+                        <img src="https://i.postimg.cc/656d6DGr/IMG-20251221-141427.jpg" class="img-fluid" alt="Project 3">
+                    </div>
+                </div>
+                <div class="col-lg-5 pe-lg-5 project-content"> 
+                      <br>
+                    <h3>RESTful  API Architecture</h3>
+                    
+                    <p>I design and build scalable RESTful APIs using Node.js and Express, following clean architecture principles. My APIs implement secure authentication, structured routing, robust error handling, and MongoDB for flexible, efficient data storage with well-documented endpoints for seamless frontend and third-party integration.</p>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+               <div class="row project-row flex-lg-row-reverse">
+                <div class="col-lg-7">
+                    <div class="project-img-container">
+                        <img src="https://i.postimg.cc/q72txL3d/IMG_20251221_141313.jpg" class="img-fluid" alt="Project 2">
+                    </div>
+                </div>
+                <div class="col-lg-5 pe-lg-5 project-content">
+                      <br>
+                    <h3>Database Management </h3>
+                    
+                    <p>I handle database management using MongoDB, focusing on efficient schema design, data modeling, and optimized queries for performance. I implement data validation, indexing, and backup strategies to ensure data integrity and reliability. I also manage secure data access, support scalable application growth, and maintain clean, well-organized collections that integrate seamlessly with backend services and APIs.</p>
+             
+                </div>
+            </div>
+ 
+            <!-- project 4-->
+            
+               <div class="row project-row flex-lg-row-reverse">
+                <div class="col-lg-7">
+                    <div class="project-img-container">
+                        <img src="https://i.postimg.cc/RhpqZpjJ/IMG_20251221_141244.jpg" class="img-fluid" alt="Project 2">
+                    </div>
+                </div>
+                <div class="col-lg-5 pe-lg-5 project-content">
+                     <br>
+                    <h3>Authentication and authorization </h3>
+                    
+                    <p>I implement secure authentication and authorization systems using industry best practices such as JWT, password hashing, and role-based access control. These mechanisms ensure proper user identity verification, protected API routes, and controlled access to resources. I manage user sessions securely, enforce permissions based on roles, and prevent unauthorized actions while maintaining scalability, performance, and data security across applications.</p>
+                    
+                </div>
+            </div>
+   </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p class="text-muted">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
+            </div>
+
+            <div class="contact-card">
+                <form id="portfolioContactForm">
+                    <div class="mb-4">
+                        <label class="form-label fw-bold small text-uppercase">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Your Name" required name="user_name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-bold small text-uppercase">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email" required name="user_email">
+                    </div>
+                    <div class="mb-5">
+                        <label class="form-label fw-bold small text-uppercase">Message</label>
+                        <textarea class="form-control" rows="8" placeholder="Enter Your Message" required name="user_message"></textarea>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary btn-primary-custom px-5">Submit</button>
+                    </div>
+                </form>
+                <div id="formResponse" class="mt-3 text-center d-none"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4 class="text-uppercase fw-bold mb-4">Adereti Taiwo</h4>
+                    <p class="small text-secondary">A Solution Architect-focused Full Stack Developer building the future of the World tech ecosystem through scalable code and mentorship.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h4 class="text-uppercase fw-bold mb-4">Social</h4>
+                    <div class="fs-4">
+                        <a href="https://www.linkedin.com/in/adereti-taiwo-5a7b93398?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                      
+                        <a href="https://x.com/elusivedev08?t=LMRpzK8voqV6csbQuqav7w&s=09" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="text-center small text-secondary">
+                &copy; Copyright 2024. Made by <a href="https://www.google.com/search?client=ms-android-xiaomi-terr1-rso2&hs=QC1o&sca_esv=cc24bdeaa2bd123f&sxsrf=AE3TifM7wBbc93q5vu8K1015kp91NllQpg:1766325756593&q=ollyverse&nfpr=1&sa=X&sqi=2&ved=2ahUKEwiR552a7M6RAxVadUEAHe_jKT4QvgUoAXoECA8QAg&biw=360&bih=786&dpr=2#ebo=0" class="text-white text-decoration-underline">Adereti Taiwo (ELUSIVE) | junior backend developer OLLYVERSE.</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script>
+        
+        
+        
+    </script>
+</body>
+</html>
+
