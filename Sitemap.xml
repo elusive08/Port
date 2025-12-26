@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+​<urlset xmlns="[suspicious link removed]">
+<!-- Primary Landing Page -->
+<url>
+<loc>https://www.google.com/url?sa=E&source=gmail&q=https://adereti-elusive.netlify.app/</loc>
+<lastmod>2024-12-21</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+​<!-- About Section -->
+​<url>
+<loc>https://www.google.com/search?q=https://adereti-elusive.netlify.app/%23about</loc>
+<lastmod>2024-12-21</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+​<!-- Projects Section -->
+​<url>
+<loc>https://www.google.com/search?q=https://adereti-elusive.netlify.app/%23projects</loc>
+<lastmod>2024-12-21</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+​<!-- Contact Section -->
+​<url>
+<loc>https://www.google.com/search?q=https://adereti-elusive.netlify.app/%23contact</loc>
+<lastmod>2024-12-21</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.7</priority>
+</url>
+</urlset>
